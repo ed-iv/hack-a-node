@@ -14,6 +14,11 @@ test:
 run:
 	 cargo run --release -- --dev --tmp
 
+.PHONY: run native
+run:
+	SKIP_WASM_BUILD=1 cargo run --release -- --dev --tmp
+
+
 .PHONY: build
 build:
 	 cargo build --release
